@@ -15,8 +15,7 @@ document.getElementById('jsch-mobile-menu-btn').onclick = function() {
         createdDiv.innerHTML+=MobileMenu;
         var allElems=document.querySelectorAll("#jsch-mobile-menu");
         for(let i = 0; i < allElems.length; i++) {
-            allElems[i].onclick = function(e) {
-                e.preventDefault();                     
+            allElems[i].onclick = function(e) {                                    
                 if(e.target.id=='jsch-mobile-menu-close-x') {
                     jschToggleMenuBar(document.getElementById('jsch-mobile-menu'),'jsch-hidden-menubar');
                     return;
@@ -24,6 +23,7 @@ document.getElementById('jsch-mobile-menu-btn').onclick = function() {
                 let element=e.target.nextElementSibling;                        
                 if(element) {
                     if(element.tagName=='UL') {
+                        e.preventDefault();
                         jschToggleMenuList(e.target.nextElementSibling,'jsch-hidden-menu');
                     }
                 }
