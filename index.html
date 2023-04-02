@@ -4,18 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css"></link>
     <title>Document</title>
 </head>
 <body>
-    <button id="jsch-mobile-menu-btn">menu</button>
+    <button id="jsch-mobile-menu-btn" style="position:relative;float:right;">menu</button>
     <script>
         const jschMobileMenuObjStr = `{
-         "0":{"name": "a", "url": "a"},
-         "1":{"name": "b", "url": "b"},
-         "2":{
-            "0":{"name": "c", "url": "c"},
-            "1":{"name": "d", "url": "d"} 
-         }
+         "0":{"name": "Főoldal", "url": "#fooldal"},
+         "1":{"name": "Rólunk", "url": "#rolunk"},
+         "2":{"name": "Termékkategóriák", "url": "", 
+            "0":{"name": "Fűszerek", "url": "#fuszerek"},
+            "1":{"name": "Halak", "url": "",
+              "0":{"name": "Tőkehal", "url": "#tokehal"},
+              "1":{"name": "Lazac", "url": "",
+                "0":{"name": "Norvég lazac", "url": "#norveg_lazac"},
+                "1":{"name": "Atlanti lazac", "url": "#atlanti_lazac"}                
+              }                 
+            }          
+          },
+         "3":{"name": "Termékek", "url": "#termekek"},
+         "4":{"name": "Kontakt", "url": "#kontakt"},
+         "5":{"name": "Telephelyeink", "url": "",  
+            "0":{"name": "Vát", "url": "#vat"},
+            "1":{"name": "Vác", "url": "#vac"}          
+          }            
         }`
         ;
     </script>
